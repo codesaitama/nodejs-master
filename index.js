@@ -77,7 +77,7 @@ let unifiedServer = function(req, res) {
 
         // Route the request to the handler specified in the router.
         chooseHandler(data, function(statusCode, payload) {
-            // Use the status code called baked by the handler or default to 200
+            // Use the status code called back by the handler or default to 200
             statusCode = typeof(statusCode) == 'number' ? statusCode : 200;
 
             // Use the payload called baked by the handler or default to an empty object
@@ -92,12 +92,11 @@ let unifiedServer = function(req, res) {
             res.end(payloadString);
             console.log(`Returning the response : `, statusCode, payloadString);
             //console.log(`Request recieved on path: ${trimmedPath} with the method: ${method} and with these query string params: `, queryStringObject);
-
         });
 
     });
-
 }
+
 
 // Define request router.
 let router = {
