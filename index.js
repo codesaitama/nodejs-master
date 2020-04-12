@@ -8,6 +8,10 @@ let config = require('./lib/config');
 let handlers = require('./lib/handlers');
 let helpers = require('./lib/helpers');
 
+let checkHandle = require('./lib/handlers/checksHandler');
+let userHandle = require('./lib/handlers/userHandler');
+let tokenHandle = require('./lib/handlers/tokenHandler');
+
 // Instantiate the HTTP Server
 let httpServer = http.createServer(function(req, res) {
     unifiedServer(req, res);
@@ -101,7 +105,7 @@ let unifiedServer = function(req, res) {
 // Define request router.
 let router = {
     ping: handlers.ping,
-    users: handlers.users,
-    tokens: handlers.tokens,
-    checks: handlers.checks
+    users: userHandle.users,
+    tokens: tokenHandle.tokens,
+    checks: checkHandle.checks
 }
