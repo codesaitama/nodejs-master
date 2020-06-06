@@ -12,6 +12,11 @@ let checkHandle = require('./lib/handlers/checksHandler');
 let userHandle = require('./lib/handlers/userHandler');
 let tokenHandle = require('./lib/handlers/tokenHandler');
 
+// @TODO GET RID OF THIS
+helpers.sendTwilioSMS('503702335', 'Hello', function(err) {
+    console.log('This was the error ', err);
+});
+
 // Instantiate the HTTP Server
 let httpServer = http.createServer(function(req, res) {
     unifiedServer(req, res);
