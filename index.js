@@ -100,7 +100,6 @@ let unifiedServer = function(req, res) {
 
             res.end(payloadString);
             console.log(`Returning the response : `, statusCode, payloadString);
-            //console.log(`Request recieved on path: ${trimmedPath} with the method: ${method} and with these query string params: `, queryStringObject);
         });
 
     });
