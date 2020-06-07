@@ -83,6 +83,7 @@ let unifiedServer = function(req, res) {
             payload: helpers.parseJsonToObject(buffer)
 
         }
+        
 
         // Route the request to the handler specified in the router.
         chooseHandler(data, function(statusCode, payload) {
