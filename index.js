@@ -106,7 +106,6 @@ let unifiedServer = function(req, res) {
     });
 }
 
-
 // Define request router.
 let router = {
     ping: handlers.ping,
